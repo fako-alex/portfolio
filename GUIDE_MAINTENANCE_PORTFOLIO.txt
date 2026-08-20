@@ -1,0 +1,466 @@
+GUIDE DE MAINTENANCE DU PORTFOLIO GITHUB PAGES FAKO TIAKO Alex
+
+====================================================================== 1.
+STRUCTURE DU PROJET
+======================================================================
+
+Ne pas supprimer, déplacer ou renommer les dossiers/fichiers principaux
+sans raison.
+
+Structure actuelle :
+
+Mon_portfolio/ │ ├── .git/ ├── assets/ ├── certifications/ ├── cvs/ ├──
+ebooks/ ├── videos/ ├── index.html ├── script.js ├── style.css ├── NOM
+COMPLET.docx └── Pour faire des modifications ou ajout de CV, videos,
+certificat ou autre.txt
+
+IMPORTANT : - index.html = structure et contenu principal du site -
+style.css = apparence/design du site - script.js = interactions,
+animations et fonctions JavaScript - assets/ = images et autres
+ressources - certifications/ = certificats PDF - cvs/ = CV PDF - ebooks/
+= e-books PDF - videos/ = vidéos - .git/ = système Git. NE PAS MODIFIER
+MANUELLEMENT.
+
+======================================================================
+2. REGLE D’OR AVANT TOUTE MODIFICATION
+======================================================================
+
+AVANT DE MODIFIER LE PORTFOLIO :
+
+1.  Faire une copie de sauvegarde du dossier Mon_portfolio.
+2.  Ne pas supprimer du code existant pour ajouter un nouveau contenu.
+3.  Ne pas renommer un fichier déjà utilisé par le site.
+4.  Ne pas changer les chemins des fichiers sans modifier aussi les
+    références correspondantes dans le code.
+5.  Tester le site avec Live Server avant d’envoyer les modifications
+    sur GitHub.
+6.  Vérifier que les boutons fonctionnent.
+7.  Vérifier l’affichage sur ordinateur et téléphone.
+8.  Ensuite seulement faire : git add . git commit -m “Description de la
+    modification” git push
+
+======================================================================
+3. AJOUTER UNE NOUVELLE VIDEO
+======================================================================
+
+Dossier :
+
+videos/
+
+Exemple :
+
+videos/ ├── installation-dahua.mp4 ├── installation-hikvision.mp4 └──
+nouvelle-video.mp4
+
+ETAPE 1 : Copier la nouvelle vidéo dans le dossier videos/.
+
+ETAPE 2 : Privilégier le format MP4 pour une bonne compatibilité
+navigateur.
+
+ETAPE 3 : Si le système de vidéos utilise une liste dans script.js,
+ajouter la nouvelle vidéo UNIQUEMENT dans cette liste.
+
+Exemple :
+
+{ title: “Installation d’une pointeuse Dahua”, category: “Gestion du
+temps”, file: “videos/installation-dahua.mp4” }
+
+Pour une nouvelle vidéo :
+
+{ title: “Nom de la nouvelle vidéo”, category: “Catégorie”, file:
+“videos/nouvelle-video.mp4” }
+
+NE PAS : - changer le nom du dossier videos/ - écrire un chemin Windows
+comme C:... - mettre un chemin vers un fichier qui n’est pas dans le
+projet - supprimer les anciennes vidéos de la liste
+
+Le chemin doit être relatif au site, par exemple :
+videos/nouvelle-video.mp4
+
+IMPORTANT : Si une vidéo dépasse environ 100 MiB, ne pas la pousser
+directement dans le dépôt GitHub classique. Utiliser une solution
+d’hébergement vidéo adaptée pour les gros fichiers.
+
+======================================================================
+4. AJOUTER UNE NOUVELLE CERTIFICATION
+======================================================================
+
+Dossier :
+
+certifications/
+
+Exemples de fichiers :
+
+certifications/ ├── Certificat automatisation excel.pdf ├── certificat
+Excel Power Query in exel for beginners.pdf ├── Certificat ms excel.pdf
+├── Certification upgrade windows.pdf └── nouvelle-certification.pdf
+
+ETAPE 1 : Copier le PDF dans certifications/.
+
+ETAPE 2 : Si le système utilise une liste dans script.js, ajouter une
+nouvelle entrée dans la liste des certifications.
+
+Exemple :
+
+{ title: “Certification Dahua”, category: “Contrôle d’accès”, file:
+“certifications/mon-certificat.pdf” }
+
+Pour une nouvelle certification :
+
+{ title: “Nom exact de la certification”, category: “Domaine”, file:
+“certifications/nouveau-certificat.pdf” }
+
+ETAPE 3 : Le bouton “Voir” doit ouvrir le PDF dans le navigateur.
+
+ETAPE 4 : Le bouton “Télécharger” doit utiliser le même chemin du
+fichier.
+
+IMPORTANT : Si le nom du fichier contient des espaces ou des caractères
+spéciaux, il est préférable de conserver un nom de fichier simple pour
+éviter les problèmes de chemin.
+
+Exemple recommandé : certification-dahua-controle-acces.pdf
+
+Plutôt que : Certification Dahua contrôle d’accès (version finale).pdf
+
+======================================================================
+5. AJOUTER UN NOUVEAU CV
+======================================================================
+
+Dossier :
+
+cvs/
+
+Exemple actuel :
+
+cvs/CV_Alex_FAKO_TIAKO.pdf
+
+Pour remplacer le CV :
+
+1.  Copier le nouveau PDF dans cvs/.
+2.  Si le code pointe vers l’ancien nom, modifier UNIQUEMENT le chemin
+    dans la section CV de index.html ou dans la configuration JavaScript
+    prévue pour le CV.
+3.  Tester le bouton “Voir mon CV”.
+4.  Tester le bouton “Télécharger mon CV”.
+
+Exemple :
+
+cvs/CV_Alex_FAKO_TIAKO_2026.pdf
+
+Ne pas supprimer l’ancien CV avant d’avoir vérifié que le nouveau
+fonctionne.
+
+======================================================================
+6. AJOUTER UN NOUVEL E-BOOK
+======================================================================
+
+Dossier :
+
+ebooks/
+
+Exemple actuel :
+
+ebooks/Devenir_la_meilleure_version_de_soi_21_jours_FAKO_TIAKO_Alex.pdf
+
+Pour ajouter un e-book :
+
+1.  Copier le PDF dans ebooks/.
+2.  Ajouter son entrée dans la liste des e-books si le système utilise
+    une liste JavaScript.
+
+Exemple :
+
+{ title: “Devenir la meilleure version de soi-même en 21 jours”,
+category: “Développement personnel”, file:
+“ebooks/Devenir_la_meilleure_version_de_soi_21_jours_FAKO_TIAKO_Alex.pdf”
+}
+
+Pour un nouvel e-book :
+
+{ title: “Titre du nouvel e-book”, category: “Catégorie”, file:
+“ebooks/nouvel-ebook.pdf” }
+
+Le portfolio pourra proposer : - Lire / Ouvrir - Télécharger
+
+======================================================================
+7. AJOUTER UNE IMAGE
+======================================================================
+
+Les images doivent être placées dans le dossier prévu pour les images,
+par exemple :
+
+assets/images/
+
+Exemple :
+
+assets/images/profile.jpg assets/images/projet-dahua.jpg
+
+Ne pas mettre une image sur le site avec un chemin local du type :
+
+C:_portfolio...
+
+Le site doit toujours utiliser un chemin relatif :
+
+assets/images/profile.jpg
+
+======================================================================
+8. AJOUTER UN NOUVEAU PROJET
+======================================================================
+
+Les projets pourront être enregistrés dans script.js si le système
+utilise une liste de projets.
+
+Exemple :
+
+{ title: “Installation d’une solution de gestion du temps”, client:
+“WEST ALLIANCE”, year: “2026”, category: “Gestion du temps”,
+description: “Installation, configuration et mise en service.”, image:
+“assets/images/west-alliance.jpg” }
+
+Pour ajouter un projet : - ne pas supprimer les anciens projets - copier
+le modèle - modifier uniquement les informations du nouveau projet -
+vérifier les chemins des images
+
+======================================================================
+9. index.html
+======================================================================
+
+index.html contient la structure générale du portfolio.
+
+Exemples de sections : - Accueil - À propos - Compétences -
+Expériences - Projets - Certifications - Vidéos - E-books - CV - Contact
+
+IMPORTANT : Ne pas supprimer une balise
+ou un élément existant simplement pour ajouter du contenu.
+
+Si une section existe déjà, ajouter le contenu dans cette section.
+
+======================================================================
+10. style.css
+======================================================================
+
+style.css contrôle : - couleurs - tailles - espacements - cartes -
+boutons - animations CSS - responsive - affichage
+téléphone/tablette/ordinateur
+
+IMPORTANT : Pour ajouter un contenu, ne pas modifier le CSS au hasard.
+
+Si une nouvelle carte est créée, réutiliser les classes CSS existantes
+avant d’en créer une nouvelle.
+
+======================================================================
+11. script.js
+======================================================================
+
+script.js contrôle les fonctions interactives du portfolio.
+
+Il pourra notamment gérer : - menu mobile - animations - affichage des
+projets - certifications - vidéos - e-books - fenêtres modales -
+filtres - boutons - navigation dynamique
+
+IMPORTANT : Ne pas remplacer tout script.js par un nouveau code sans
+sauvegarde.
+
+Lorsqu’une nouvelle fonctionnalité est ajoutée : 1. sauvegarder l’ancien
+fichier 2. ajouter la fonctionnalité 3. tester 4. corriger les erreurs
+5. seulement ensuite faire le push GitHub
+
+======================================================================
+12. NOM DES FICHIERS
+======================================================================
+
+Pour éviter les problèmes avec GitHub Pages, utiliser de préférence :
+
+-   minuscules
+-   chiffres
+-   tirets
+-   underscores
+
+Exemples :
+
+installation-dahua.mp4 certification-dahua.pdf cv-alex-fako-tiako.pdf
+ebook-gestion-argent.pdf
+
+Eviter autant que possible :
+
+é è à ç () [] & # espaces multiples
+
+======================================================================
+13. TEST LOCAL AVANT GITHUB
+======================================================================
+
+Après chaque modification :
+
+1.  Ouvrir VS Code.
+2.  Ouvrir index.html avec Live Server.
+3.  Tester la page.
+4.  Tester les liens.
+5.  Tester les PDF.
+6.  Tester les vidéos.
+7.  Tester les boutons.
+8.  Vérifier la version mobile.
+
+Si une erreur apparaît, corriger AVANT de faire git push.
+
+======================================================================
+14. ENVOYER LES MODIFICATIONS SUR GITHUB
+======================================================================
+
+Dans le terminal VS Code :
+
+git status
+
+Puis :
+
+git add .
+
+Puis :
+
+git commit -m “Ajout de nouvelles certifications et vidéos”
+
+Puis :
+
+git push
+
+Attendre quelques instants.
+
+GitHub Pages mettra ensuite le site à jour.
+
+======================================================================
+15. EXEMPLE COMPLET : AJOUTER UNE VIDEO
+======================================================================
+
+Je veux ajouter :
+
+installation-pointeuse-dahua.mp4
+
+1.  Copier le fichier dans :
+
+videos/installation-pointeuse-dahua.mp4
+
+2.  Ajouter dans la liste JavaScript prévue :
+
+{ title: “Installation d’une pointeuse Dahua”, category: “Gestion du
+temps”, file: “videos/installation-pointeuse-dahua.mp4” }
+
+3.  Sauvegarder.
+
+4.  Tester avec Live Server.
+
+5.  Vérifier que la vidéo se lance.
+
+6.  Faire :
+
+git add . git commit -m “Ajout vidéo installation pointeuse Dahua” git
+push
+
+======================================================================
+16. EXEMPLE COMPLET : AJOUTER UNE CERTIFICATION
+======================================================================
+
+Je veux ajouter :
+
+certification-dahua-gestion-temps.pdf
+
+1.  Copier le fichier dans :
+
+certifications/certification-dahua-gestion-temps.pdf
+
+2.  Ajouter dans la liste JavaScript prévue :
+
+{ title: “Certification Dahua - Gestion du temps”, category: “Dahua /
+Gestion du temps”, file:
+“certifications/certification-dahua-gestion-temps.pdf” }
+
+3.  Tester le bouton Voir.
+
+4.  Tester le bouton Télécharger.
+
+5.  Faire :
+
+git add . git commit -m “Ajout certification Dahua gestion du temps” git
+push
+
+======================================================================
+17. EXEMPLE COMPLET : AJOUTER UN E-BOOK
+======================================================================
+
+1.  Copier le PDF dans :
+
+ebooks/mon-nouvel-ebook.pdf
+
+2.  Ajouter son entrée dans la liste JavaScript prévue.
+
+3.  Tester Lire.
+
+4.  Tester Télécharger.
+
+5.  Faire :
+
+git add . git commit -m “Ajout nouvel ebook” git push
+
+======================================================================
+18. SI QUELQUE CHOSE NE FONCTIONNE PLUS
+======================================================================
+
+NE PAS supprimer tout le projet.
+
+NE PAS recréer un nouveau site.
+
+NE PAS modifier plusieurs fichiers au hasard.
+
+Faire :
+
+1.  Regarder le dernier fichier modifié.
+2.  Vérifier le chemin du fichier.
+3.  Vérifier l’orthographe du nom.
+4.  Vérifier l’extension (.pdf, .mp4, .jpg, etc.).
+5.  Ouvrir la console du navigateur (F12).
+6.  Lire l’erreur.
+7.  Revenir à la dernière modification.
+8.  Si nécessaire, restaurer la sauvegarde.
+
+======================================================================
+19. REGLE POUR LES FUTURES MODIFICATIONS
+======================================================================
+
+Le portfolio doit être construit pour que l’ajout d’un contenu ne
+nécessite pas de modifier toute la structure du site.
+
+OBJECTIF :
+
+Ajouter un fichier ↓ Ajouter UNE entrée dans la liste de données ↓
+Tester ↓ git add . ↓ git commit ↓ git push ↓ Portfolio mis à jour
+
+NE PAS reconstruire le site à chaque nouvel élément.
+
+======================================================================
+20. RESUME RAPIDE
+======================================================================
+
+NOUVELLE VIDEO : → videos/ → ajouter l’entrée vidéo dans la
+configuration prévue → tester → git add / commit / push
+
+NOUVELLE CERTIFICATION : → certifications/ → ajouter l’entrée
+certification → tester → git add / commit / push
+
+NOUVEAU CV : → cvs/ → modifier le chemin du CV si nécessaire → tester →
+git add / commit / push
+
+NOUVEL E-BOOK : → ebooks/ → ajouter l’entrée e-book → tester → git add /
+commit / push
+
+NOUVELLE IMAGE : → assets/images/ → utiliser le chemin relatif dans le
+code → tester
+
+NOUVEAU PROJET : → ajouter l’entrée dans la liste des projets → ajouter
+les images nécessaires → tester
+
+======================================================================
+FIN DU GUIDE
+======================================================================
+
+Ce document est la référence de maintenance du portfolio.
+
+Avant toute modification importante, faire une sauvegarde du projet.

@@ -1,93 +1,1016 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHEI-YOMBA Marie | Portfolio</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Portfolio professionnel de FAKO TIAKO Alex - Technicien informatique, développeur web et spécialiste des solutions IT.">
+
+    <meta name="author" content="FAKO TIAKO Alex">
+
+    <title>FAKO TIAKO Alex | Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
-<header class="hero">
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
 
-    <div class="hero-content">
+    <header class="header">
 
-        <img title="Photo de profil" src="assets/images/profiles/OIP.webp" class="profile">
+        <nav class="navbar">
 
-        <h1>CHEI-YOMBA Epse LEPANDAH Marie</h1>
+            <a href="#accueil" class="logo">
+                Alex <span> FAKO TIAKO </span>
+            </a>
 
-        <h2>Technico-commerciale • Technicienne informatique</h2>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
 
-        <p>
-            Installation • Gestion du temps • Contrôle d'accès • Support technique
-        </p>
+            <ul class="nav-menu" id="navMenu">
 
-        <a href="#projets" class="btn">Voir mes projets</a>
+                <li>
+                    <a href="#accueil">Accueil</a>
+                </li>
 
-    </div>
+                <li>
+                    <a href="#apropos">À propos</a>
+                </li>
 
-</header>
+                <li>
+                    <a href="#competences">Compétences</a>
+                </li>
 
-<section id="apropos">
+                <li>
+                    <a href="#experiences">Expériences</a>
+                </li>
 
-    <h2>À propos</h2>
+                <li>
+                    <a href="#projets">Projets</a>
+                </li>
 
-    <p>
-        Professionnelle spécialisée dans l'installation, la configuration et le
-        déploiement de solutions de gestion du temps de travail,
-        contrôle d'accès et infrastructures informatiques.
-    </p>
+                <li>
+                    <a href="#certifications">Certifications</a>
+                </li>
 
-</section>
+                <li>
+                    <a href="#videos">Vidéos</a>
+                </li>
 
-<section id="competences">
+                <li>
+                    <a href="#ebooks">E-books</a>
+                </li>
 
-    <h2>Compétences</h2>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
-    <div class="grid">
+            </ul>
 
-        <div class="card">Gestion du temps</div>
-        <div class="card">Pointeuses Dahua</div>
-        <div class="card">Contrôle d'accès</div>
-        <div class="card">Réseaux</div>
-        <div class="card">Laravel / PHP</div>
-        <div class="card">Support Technique</div>
+        </nav>
 
-    </div>
+    </header>
 
-</section>
 
-<section id="projets">
+    <main>
 
-    <h2>Projets</h2>
 
-    <div class="project">
+        <!-- =========================================================
+             ACCUEIL
+        ========================================================== -->
 
-        <h3>WEST ALLIANCE</h3>
+        <section id="accueil" class="hero">
 
-        <p>
-            Installation complète d'un système de gestion du temps
-            avec configuration des équipements biométriques.
-        </p>
+            <div class="hero-container">
 
-    </div>
+                <div class="hero-text">
 
-</section>
+                    <span class="hero-label">
+                        TECHNICIEN INFORMATIQUE & DÉVELOPPEUR WEB
+                    </span>
 
-<section id="contact">
+                    <h1>
+                        FAKO TIAKO
+                        <span>Alex</span>
+                    </h1>
 
-    <h2>Contact</h2>
+                    <h2>
+                        Je transforme les besoins informatiques
+                        en solutions concrètes.
+                    </h2>
 
-    <p>📧 ton@email.com</p>
+                    <p>
+                        Technicien informatique polyvalent, développeur web
+                        et spécialiste du déploiement de solutions IT,
+                        j'interviens dans l'installation, la configuration,
+                        la maintenance et l'accompagnement technique
+                        des entreprises.
+                    </p>
 
-    <p>📱 +241 XX XX XX XX</p>
+                    <div class="hero-buttons">
 
-    <p>📍 Libreville - Gabon</p>
+                        <a href="#projets" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Voir mes projets
+                        </a>
 
-</section>
+                        <a href="cvs/CV_Alex_FAKO_TIAKO.pdf"
+                            class="btn btn-secondary"
+                            target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            Voir mon CV
+                        </a>
+                        
+                        <a href="cvs/CV_Alex_FAKO_TIAKO.pdf"
+                        download
+                        class="btn btn-secondary">
 
-<script src="script.js"></script>
+                        <i class="fas fa-download"></i>
+
+                        Télécharger
+
+                    </a>
+
+                    </div>
+
+                    <div class="social-links">
+
+                        <a href="mailto:fako.apk241@gmail.com"
+                            aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                        <a href="https://github.com/fako-alex"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <!-- Remplace cette URL par ton vrai LinkedIn -->
+                        <a href="#"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://wa.me/24166460502"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <div class="profile-frame">
+
+                        <img src="assets/images/profiles/OIP.webp"
+                            alt="Photo professionnelle de FAKO TIAKO Alex">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             À PROPOS
+        ========================================================== -->
+
+        <section id="apropos" class="section">
+
+            <div class="section-header">
+
+                <span>QUI SUIS-JE ?</span>
+
+                <h2>À propos de moi</h2>
+
+                <p>
+                    Un profil polyvalent au service des entreprises.
+                </p>
+
+            </div>
+
+
+            <div class="about-container">
+
+                <div class="about-text">
+
+                    <p>
+                        Je suis <strong>FAKO TIAKO Alex</strong>,
+                        technicien informatique et développeur web
+                        basé à Libreville, au Gabon.
+                    </p>
+
+                    <p>
+                        J'interviens dans l'installation, la configuration
+                        et la maintenance des systèmes informatiques,
+                        ainsi que dans le déploiement de solutions
+                        technologiques adaptées aux besoins des entreprises.
+                    </p>
+
+                    <p>
+                        Mon expérience couvre également le développement
+                        d'applications web, les solutions de gestion du
+                        temps de travail, le contrôle d'accès, les équipements
+                        biométriques et le support technique.
+                    </p>
+
+                    <p>
+                        Mon objectif est de proposer des solutions
+                        <strong>fiables, pratiques et adaptées</strong>
+                        aux réalités de chaque client.
+                    </p>
+
+                </div>
+
+
+                <div class="about-stats">
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-laptop-code"></i>
+
+                        <strong>Web</strong>
+
+                        <span>Développement</span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-network-wired"></i>
+
+                        <strong>IT</strong>
+
+                        <span>Infrastructure</span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-shield-halved"></i>
+
+                        <strong>Security</strong>
+
+                        <span>Contrôle d'accès</span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-clock"></i>
+
+                        <strong>Time</strong>
+
+                        <span>Gestion du temps</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             COMPÉTENCES
+        ========================================================== -->
+
+        <section id="competences" class="section section-dark">
+
+            <div class="section-header">
+
+                <span>MON SAVOIR-FAIRE</span>
+
+                <h2>Compétences</h2>
+
+                <p>
+                    Des compétences techniques adaptées aux besoins
+                    des entreprises.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-computer"></i>
+                    </div>
+
+                    <h3>Informatique</h3>
+
+                    <p>
+                        Installation, configuration, maintenance
+                        et support des systèmes informatiques.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Windows</span>
+                        <span>Windows Server</span>
+                        <span>Maintenance</span>
+                        <span>Support IT</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <h3>Développement Web</h3>
+
+                    <p>
+                        Conception et développement d'applications
+                        et de solutions web.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>Python</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+
+                    <h3>Réseaux</h3>
+
+                    <p>
+                        Installation, configuration et maintenance
+                        des infrastructures réseau.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>LAN</span>
+                        <span>Câblage</span>
+                        <span>Configuration</span>
+                        <span>Maintenance</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+
+                    <h3>Biométrie & Gestion du temps</h3>
+
+                    <p>
+                        Installation et configuration de solutions
+                        de gestion du temps et de présence.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Dahua</span>
+                        <span>Hikvision</span>
+                        <span>Pointeuses</span>
+                        <span>Présence</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+
+                    <h3>Sécurité électronique</h3>
+
+                    <p>
+                        Déploiement de solutions de contrôle d'accès,
+                        vidéosurveillance et sécurité.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Contrôle d'accès</span>
+                        <span>Anti-intrusion</span>
+                        <span>Vidéosurveillance</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+
+                    <h3>Support & Formation</h3>
+
+                    <p>
+                        Assistance technique, résolution d'incidents
+                        et accompagnement des utilisateurs.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Support</span>
+                        <span>Formation</span>
+                        <span>Microsoft 365</span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             EXPÉRIENCES
+        ========================================================== -->
+
+        <section id="experiences" class="section">
+
+            <div class="section-header">
+
+                <span>MON PARCOURS</span>
+
+                <h2>Expériences professionnelles</h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-date">
+                        Depuis février 2025
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>Technicien Informatique polyvalent</h3>
+
+                        <h4>SOS ELECTRONIC'S</h4>
+
+                        <p>
+                            Support technique quotidien des utilisateurs,
+                            résolution des incidents, maintenance et mise
+                            à jour du parc informatique.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Installation et configuration
+                                d'équipements informatiques.
+                            </li>
+
+                            <li>
+                                Développement d'applications web
+                                avec Laravel et PHP.
+                            </li>
+
+                            <li>
+                                Solutions de gestion du temps.
+                            </li>
+
+                            <li>
+                                Contrôle d'accès et solutions de sécurité.
+                            </li>
+
+                            <li>
+                                Formation et accompagnement des utilisateurs.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-date">
+                        2024
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>Technicien Informatique</h3>
+
+                        <h4>STAR-UP GABON</h4>
+
+                        <p>
+                            Intervention technique et maintenance
+                            des systèmes informatiques.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-date">
+                        Expériences antérieures
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>Interventions & stages techniques</h3>
+
+                        <p>
+                            Expériences dans différents environnements
+                            professionnels et techniques, notamment
+                            COMILOG, Gabon Télévision, B-MULTI SERVICES
+                            et Cyberschool.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             PROJETS
+        ========================================================== -->
+
+        <section id="projets" class="section section-light">
+
+            <div class="section-header">
+
+                <span>MES RÉALISATIONS</span>
+
+                <h2>Projets professionnels</h2>
+
+                <p>
+                    Quelques exemples de solutions et installations
+                    réalisées.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        <i class="fas fa-clock"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Gestion du temps
+                        </span>
+
+                        <h3>WEST ALLIANCE</h3>
+
+                        <p>
+                            Installation et mise en service d'une
+                            solution de gestion du temps de travail.
+                        </p>
+
+                        <a href="#contact" class="project-link">
+                            En savoir plus
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Biométrie
+                        </span>
+
+                        <h3>Solutions Dahua</h3>
+
+                        <p>
+                            Installation et configuration de pointeuses
+                            et solutions de gestion du temps.
+                        </p>
+
+                        <a href="#contact" class="project-link">
+                            En savoir plus
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Développement Web
+                        </span>
+
+                        <h3>Applications Laravel</h3>
+
+                        <p>
+                            Développement d'applications web destinées
+                            à répondre à des besoins métiers.
+                        </p>
+
+                        <a href="#contact" class="project-link">
+                            En savoir plus
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             CERTIFICATIONS
+        ========================================================== -->
+
+        <section id="certifications" class="section">
+
+            <div class="section-header">
+
+                <span>MES FORMATIONS</span>
+
+                <h2>Certifications</h2>
+
+                <p>
+                    Mes certifications et formations professionnelles.
+                </p>
+
+            </div>
+
+
+            <div id="certificationsContainer"
+                class="documents-grid">
+
+                <!-- Les certifications seront générées par JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             VIDÉOS
+        ========================================================== -->
+
+        <section id="videos" class="section section-dark">
+
+            <div class="section-header">
+
+                <span>DÉMONSTRATIONS</span>
+
+                <h2>Mes vidéos</h2>
+
+                <p>
+                    Découvrez certaines de mes réalisations
+                    et démonstrations techniques.
+                </p>
+
+            </div>
+
+
+            <div id="videosContainer"
+                class="videos-grid">
+
+                <!-- Les vidéos seront générées par JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             E-BOOKS
+        ========================================================== -->
+
+        <section id="ebooks" class="section">
+
+            <div class="section-header">
+
+                <span>MES PUBLICATIONS</span>
+
+                <h2>E-books</h2>
+
+                <p>
+                    Découvrez mes publications numériques.
+                </p>
+
+            </div>
+
+
+            <div id="ebooksContainer"
+                class="documents-grid">
+
+                <!-- Les e-books seront générés par JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             CV
+        ========================================================== -->
+
+        <section id="cv" class="section cv-section">
+
+            <div class="cv-container">
+
+                <div>
+
+                    <span class="hero-label">
+                        MON PARCOURS PROFESSIONNEL
+                    </span>
+
+                    <h2>
+                        Consultez mon CV
+                    </h2>
+
+                    <p>
+                        Retrouvez mon parcours, mes expériences,
+                        mes compétences et mes formations dans
+                        mon CV professionnel.
+                    </p>
+
+                </div>
+
+
+                <div class="cv-buttons">
+
+                    <a href="cvs/CV_Alex_FAKO_TIAKO.pdf"
+                        target="_blank"
+                        class="btn btn-primary">
+
+                        <i class="fas fa-eye"></i>
+
+                        Voir mon CV
+
+                    </a>
+
+
+                    <a href="cvs/CV_Alex_FAKO_TIAKO.pdf"
+                        download
+                        class="btn btn-secondary">
+
+                        <i class="fas fa-download"></i>
+
+                        Télécharger
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             CONTACT
+        ========================================================== -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="section-header">
+
+                <span>PARLONS DE VOTRE PROJET</span>
+
+                <h2>Contact</h2>
+
+                <p>
+                    Vous avez un projet informatique ou besoin
+                    d'une intervention technique ?
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <a href="mailto:fako.apk241@gmail.com"
+                    class="contact-card">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <h3>Email</h3>
+
+                    <p>
+                        fako.apk241@gmail.com
+                    </p>
+
+                </a>
+
+
+                <a href="https://wa.me/24166460502"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    <h3>WhatsApp</h3>
+
+                    <p>
+                        +241 66 46 05 02
+                    </p>
+
+                </a>
+
+
+                <a href="https://github.com/fako-alex"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card">
+
+                    <i class="fab fa-github"></i>
+
+                    <h3>GitHub</h3>
+
+                    <p>
+                        Mes projets
+                    </p>
+
+                </a>
+
+
+                <div class="contact-card">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <h3>Localisation</h3>
+
+                    <p>
+                        Libreville, Gabon
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    FAKO TIAKO Alex
+                </h3>
+
+                <p>
+                    Technicien Informatique • Développeur Web
+                </p>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <a title="e-mail" href="mailto:fako.apk241@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+                <a title="GitHub" href="https://github.com/fako-alex"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a title="WhatsApp" href="https://wa.me/24166460502"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                FAKO TIAKO Alex — Tous droits réservés.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
