@@ -1668,5 +1668,686 @@ ul {
     .document-actions a {
         justify-content: center;
     }
+    
+}
+
+/* =========================================================
+   TAGS DES PROJETS
+========================================================= */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+}
+
+
+.project-tags span {
+
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+/* =========================================================
+   LIEN "EN SAVOIR PLUS" DES PROJETS
+========================================================= */
+
+.project-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    cursor: pointer;
+
+}
+
+/* =========================================================
+   POPUP PROJETS
+========================================================= */
+
+.project-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.80);
+
+    backdrop-filter: blur(6px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.project-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.project-modal-content {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 750px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(30px);
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.project-modal.active
+.project-modal-content {
+
+    transform: translateY(0);
+
+}
+
+
+/* Bouton fermer */
+
+.project-modal-close {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.project-modal-close:hover {
+
+    background: #1d4ed8;
+
+    color: white;
+
+}
+
+
+/* Catégorie */
+
+.project-modal-category {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* Titre */
+
+.project-modal-content h2 {
+
+    margin-bottom: 15px;
+
+    padding-right: 45px;
+
+    color: #0f172a;
+
+    font-size: 28px;
+
+    line-height: 1.3;
+
+}
+
+
+/* Localisation */
+
+.project-modal-location {
+
+    margin-bottom: 25px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+.project-modal-location i {
+
+    margin-right: 7px;
+
+    color: #1d4ed8;
+
+}
+
+
+/* Sections */
+
+.project-modal-section {
+
+    margin-top: 25px;
+
+}
+
+
+.project-modal-section h3 {
+
+    margin-bottom: 10px;
+
+    color: #1d4ed8;
+
+    font-size: 18px;
+
+}
+
+
+.project-modal-section h3 i {
+
+    margin-right: 8px;
+
+}
+
+
+.project-modal-section p {
+
+    color: #475569;
+
+    line-height: 1.7;
+
+}
+
+
+/* Liste des travaux */
+
+.project-modal-section ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.project-modal-section li {
+
+    margin-bottom: 9px;
+
+    color: #475569;
+
+}
+
+
+.project-modal-section li i {
+
+    margin-right: 8px;
+
+    color: #16a34a;
+
+}
+
+
+/* Technologies */
+
+.project-modal-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
+.project-modal-tags span {
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .project-modal {
+
+        padding: 12px;
+
+    }
+
+
+    .project-modal-content {
+
+        padding: 30px 22px;
+
+        max-height: 92vh;
+
+        border-radius: 14px;
+
+    }
+
+
+    .project-modal-content h2 {
+
+        font-size: 22px;
+
+    }
+
+}
+
+.project-link {
+
+    border: none;
+
+    background: none;
+
+    font-family: inherit;
+
+    font-size: inherit;
+
+    font-weight: 600;
+
+    color: #1d4ed8;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding: 0;
+
+    cursor: pointer;
+
+}
+
+/* =========================================================
+   GALERIE PHOTOS DES PROJETS
+========================================================= */
+
+.project-modal-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 15px;
+
+}
+
+
+.project-modal-photo {
+
+    height: 180px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: #f1f5f9;
+
+}
+
+
+.project-modal-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.project-modal-photo:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================================================
+   VIDÉOS
+========================================================= */
+
+.project-modal-videos {
+
+    display: grid;
+
+    gap: 20px;
+
+}
+
+
+.project-modal-video {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #000;
+
+}
+
+
+.project-modal-video video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 450px;
+
+}
+
+
+/* =========================================================
+   VISIONNEUSE PHOTO
+========================================================= */
+
+.photo-viewer {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.photo-viewer.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.photo-viewer img {
+
+    max-width: 95%;
+
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+}
+
+
+.photo-viewer-close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #0f172a;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.photo-viewer-close:hover {
+
+    background: #1d4ed8;
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .project-modal-gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .project-modal-photo {
+
+        height: 220px;
+
+    }
+
+
+    .project-modal-video video {
+
+        max-height: 300px;
+
+    }
+
+}
+
+/* =========================================================
+   COMPÉTENCES RAPIDES — ACCUEIL
+========================================================= */
+
+.hero-skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.hero-skills span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-skills span i {
+
+    font-size: 13px;
+
+}
+
+
+.hero-skills span:hover {
+
+    background: rgba(255,255,255,0.16);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   BOUTONS — CURSEUR
+========================================================= */
+
+.hero-buttons .btn {
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-skills {
+
+        justify-content: center;
+
+    }
 
 }
