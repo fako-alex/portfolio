@@ -872,3 +872,690 @@ animatedElements.forEach(function (element) {
 console.log(
     "Portfolio de FAKO TIAKO Alex chargé avec succès."
 );
+
+/* =========================================================
+   DÉTAILS DES PROJETS
+========================================================= */
+
+const projetsDetails = [
+
+    {
+        categorie: "Gestion du temps de travail",
+        titre: "Gestionnaire de Temps de Travail Dahua — TRYAM",
+
+        localisation: "Libreville & Ndjolé",
+
+        description:
+            "Installation et mise en service d'une solution Dahua de gestion du temps de travail sur les différents sites de TRYAM.",
+
+        travaux: [
+            "Installation des équipements",
+            "Configuration du système",
+            "Configuration réseau",
+            "Paramétrage des utilisateurs",
+            "Tests de fonctionnement",
+            "Mise en service de la solution"
+        ],
+
+        technologies: [
+            "Dahua",
+            "Biométrie",
+            "Gestion du temps",
+            "Réseau"
+        ],
+
+        photos: [
+            // "projects/tryam/photo-1.jpg",
+            // "projects/tryam/photo-2.jpg"
+        ],
+
+        videos: [
+            // "projects/tryam/demonstration.mp4"
+        ]
+    },
+
+
+    {
+        categorie: "Gestion du temps de travail",
+        titre: "Gestionnaire de Temps de Travail HIKVISION",
+
+        localisation: "Gabon",
+
+        description:
+            "Mise en place et configuration d'une solution HIKVISION destinée à la gestion du temps de travail et au suivi des présences des employés.",
+
+        travaux: [
+            "Installation des équipements",
+            "Configuration du système",
+            "Paramétrage des utilisateurs",
+            "Configuration réseau",
+            "Tests de fonctionnement",
+            "Mise en service"
+        ],
+
+        technologies: [
+            "HIKVISION",
+            "Biométrie",
+            "Pointage",
+            "Réseau"
+        ],
+
+        photos: [
+            // "projects/hikvision/photo-1.jpg"
+        ],
+
+        videos: [
+            // "projects/hikvision/demonstration.mp4"
+        ]
+    },
+
+
+    {
+        categorie: "Contrôle d'accès",
+        titre: "Installation du Contrôle d'Accès — Deloitte",
+
+        localisation: "Gabon",
+
+        description:
+            "Installation, configuration et mise en service d'une solution de contrôle d'accès sur le site de Deloitte.",
+
+        travaux: [
+            "Installation des équipements",
+            "Configuration du système",
+            "Paramétrage des accès",
+            "Tests de fonctionnement",
+            "Mise en service"
+        ],
+
+        technologies: [
+            "Contrôle d'accès",
+            "Sécurité électronique",
+            "Réseau"
+        ],
+
+        photos: [
+            // "projects/deloitte/photo-1.jpg"
+        ],
+
+        videos: [
+            // "projects/deloitte/demonstration.mp4"
+        ]
+    },
+
+
+    {
+        categorie: "Contrôle d'accès",
+        titre: "Installation du Contrôle d'Accès — BCEG",
+
+        localisation: "Gabon",
+
+        description:
+            "Installation et configuration d'une solution de contrôle d'accès destinée à sécuriser et gérer les accès au site de BCEG.",
+
+        travaux: [
+            "Installation des équipements",
+            "Configuration du système",
+            "Paramétrage des utilisateurs",
+            "Gestion des droits d'accès",
+            "Tests",
+            "Mise en service"
+        ],
+
+        technologies: [
+            "Contrôle d'accès",
+            "Sécurité",
+            "Installation"
+        ],
+
+        photos: [
+            // "projects/bceg/photo-1.jpg"
+        ],
+
+        videos: [
+            // "projects/bceg/demonstration.mp4"
+        ]
+    },
+
+
+    {
+        categorie: "Contrôle d'accès",
+        titre: "Installation du Contrôle d'Accès — AGADEV",
+
+        localisation: "Gabon",
+
+        description:
+            "Installation et configuration d'une solution de contrôle d'accès sur le site d'AGADEV.",
+
+        travaux: [
+            "Installation des équipements",
+            "Configuration du système",
+            "Paramétrage des accès",
+            "Vérification du fonctionnement",
+            "Tests",
+            "Mise en service"
+        ],
+
+        technologies: [
+            "Contrôle d'accès",
+            "Sécurité électronique",
+            "Configuration"
+        ],
+
+        photos: [
+            // "projects/agadev/photo-1.jpg"
+        ],
+
+        videos: [
+            // "projects/agadev/demonstration.mp4"
+        ]
+    },
+
+
+    {
+        categorie: "Gestion du temps de travail",
+        titre: "Gestionnaire de Temps de Travail Dahua — West Alliance",
+
+        localisation: "Derrière Air France",
+
+        description:
+            "Installation et mise en service d'une solution Dahua de gestion du temps de travail pour West Alliance.",
+
+        travaux: [
+            "Installation de la pointeuse",
+            "Configuration du système",
+            "Configuration réseau",
+            "Gestion des employés",
+            "Gestion des pointages",
+            "Tests et mise en service"
+        ],
+
+        technologies: [
+            "Dahua",
+            "Gestion du temps",
+            "Biométrie",
+            "Réseau"
+        ],
+
+        photos: [
+            "projects/west-alliance/image 1.jpeg",
+            "projects/west-alliance/image 2.jpeg",
+            "projects/west-alliance/image 3.jpeg",
+            "projects/west-alliance/image 4.jpeg",
+            "projects/west-alliance/image 5.jpeg",
+            "projects/west-alliance/image 6.jpeg",
+            "projects/west-alliance/image 7.jpeg",
+            "projects/west-alliance/image 8.jpeg",
+            "projects/west-alliance/image 9.jpeg",
+            "projects/west-alliance/image 10.jpeg"
+        ],
+
+        videos: [
+            "projects/west-alliance/video installation GFA 1.mp4",
+            "projects/west-alliance/video installation GFA 2.mp4"
+        ]
+    }
+
+];
+
+/* =========================================================
+   POPUP DÉTAILS PROJET
+========================================================= */
+
+function ouvrirProjet(index) {
+
+    const projet = projetsDetails[index];
+
+    if (!projet) {
+        return;
+    }
+
+
+    /* Supprimer une ancienne fenêtre */
+
+    const ancienneModal =
+        document.querySelector(".project-modal");
+
+    if (ancienneModal) {
+        ancienneModal.remove();
+    }
+
+
+    /* =====================================================
+       TECHNOLOGIES
+    ====================================================== */
+
+    const technologiesHTML =
+        projet.technologies
+            .map(function (technologie) {
+
+                return `
+                    <span>${technologie}</span>
+                `;
+
+            })
+            .join("");
+
+
+    /* =====================================================
+       TRAVAUX
+    ====================================================== */
+
+    const travauxHTML =
+        projet.travaux
+            .map(function (travail) {
+
+                return `
+                    <li>
+                        <i class="fas fa-check"></i>
+                        ${travail}
+                    </li>
+                `;
+
+            })
+            .join("");
+
+
+    /* =====================================================
+       PHOTOS
+    ====================================================== */
+
+    let photosHTML = "";
+
+
+    if (projet.photos && projet.photos.length > 0) {
+
+        photosHTML = `
+
+            <div class="project-modal-section">
+
+                <h3>
+
+                    <i class="fas fa-images"></i>
+
+                    Photos de la réalisation
+
+                </h3>
+
+
+                <div class="project-modal-gallery">
+
+                    ${
+
+                        projet.photos.map(function (photo) {
+
+                            return `
+
+                                <div
+                                    class="project-modal-photo"
+                                    onclick="agrandirPhoto('${photo}')"
+                                >
+
+                                    <img
+                                        src="${photo}"
+                                        alt="Photo du projet"
+                                        loading="lazy"
+                                    >
+
+                                </div>
+
+                            `;
+
+                        }).join("")
+
+                    }
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       VIDÉOS
+    ====================================================== */
+
+    let videosHTML = "";
+
+
+    if (projet.videos && projet.videos.length > 0) {
+
+        videosHTML = `
+
+            <div class="project-modal-section">
+
+                <h3>
+
+                    <i class="fas fa-video"></i>
+
+                    Vidéo de démonstration
+
+                </h3>
+
+
+                <div class="project-modal-videos">
+
+                    ${
+
+                        projet.videos.map(function (video) {
+
+                            return `
+
+                                <div class="project-modal-video">
+
+                                    <video
+                                        controls
+                                        preload="metadata"
+                                        playsinline
+                                    >
+
+                                        <source
+                                            src="${video}"
+                                            type="video/mp4"
+                                        >
+
+                                        Votre navigateur ne peut pas
+                                        lire cette vidéo.
+
+                                    </video>
+
+                                </div>
+
+                            `;
+
+                        }).join("")
+
+                    }
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       CRÉATION DE LA POPUP
+    ====================================================== */
+
+    const modal =
+        document.createElement("div");
+
+    modal.className = "project-modal";
+
+
+    modal.innerHTML = `
+
+        <div class="project-modal-content">
+
+
+            <button
+                class="project-modal-close"
+                aria-label="Fermer"
+            >
+
+                <i class="fas fa-xmark"></i>
+
+            </button>
+
+
+            <span class="project-modal-category">
+
+                ${projet.categorie}
+
+            </span>
+
+
+            <h2>
+
+                ${projet.titre}
+
+            </h2>
+
+
+            <div class="project-modal-location">
+
+                <i class="fas fa-location-dot"></i>
+
+                ${projet.localisation}
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="project-modal-section">
+
+                <h3>
+
+                    <i class="fas fa-file-lines"></i>
+
+                    Description
+
+                </h3>
+
+                <p>
+
+                    ${projet.description}
+
+                </p>
+
+            </div>
+
+
+            <!-- TRAVAUX -->
+
+            <div class="project-modal-section">
+
+                <h3>
+
+                    <i class="fas fa-screwdriver-wrench"></i>
+
+                    Travaux réalisés
+
+                </h3>
+
+
+                <ul>
+
+                    ${travauxHTML}
+
+                </ul>
+
+            </div>
+
+
+            <!-- TECHNOLOGIES -->
+
+            <div class="project-modal-section">
+
+                <h3>
+
+                    <i class="fas fa-microchip"></i>
+
+                    Technologies et compétences
+
+                </h3>
+
+
+                <div class="project-modal-tags">
+
+                    ${technologiesHTML}
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTOS -->
+
+            ${photosHTML}
+
+
+            <!-- VIDÉOS -->
+
+            ${videosHTML}
+
+
+        </div>
+
+    `;
+
+
+    document.body.appendChild(modal);
+
+
+    /* =====================================================
+       ANIMATION
+    ====================================================== */
+
+    setTimeout(function () {
+
+        modal.classList.add("active");
+
+    }, 10);
+
+
+    /* =====================================================
+       FERMER
+    ====================================================== */
+
+    const closeButton =
+        modal.querySelector(".project-modal-close");
+
+
+    closeButton.addEventListener(
+        "click",
+        function () {
+
+            fermerProjet(modal);
+
+        }
+    );
+
+
+    /* Fermer en cliquant à l'extérieur */
+
+    modal.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === modal) {
+
+                fermerProjet(modal);
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       TOUCHE ESC
+    ====================================================== */
+
+    function fermerAvecEscape(event) {
+
+        if (event.key === "Escape") {
+
+            fermerProjet(modal);
+
+            document.removeEventListener(
+                "keydown",
+                fermerAvecEscape
+            );
+
+        }
+
+    }
+
+
+    document.addEventListener(
+        "keydown",
+        fermerAvecEscape
+    );
+
+}
+
+
+/* =========================================================
+   AGRANDIR UNE PHOTO
+========================================================= */
+
+function agrandirPhoto(photo) {
+
+    const viewer =
+        document.createElement("div");
+
+    viewer.className = "photo-viewer";
+
+
+    viewer.innerHTML = `
+
+        <button
+            class="photo-viewer-close"
+            aria-label="Fermer"
+        >
+
+            <i class="fas fa-xmark"></i>
+
+        </button>
+
+
+        <img
+            src="${photo}"
+            alt="Photo agrandie"
+        >
+
+    `;
+
+
+    document.body.appendChild(viewer);
+
+
+    setTimeout(function () {
+
+        viewer.classList.add("active");
+
+    }, 10);
+
+
+    viewer.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === viewer ||
+                event.target.closest(".photo-viewer-close")
+            ) {
+
+                viewer.remove();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   FERMER LA FENÊTRE PROJET
+========================================================= */
+
+function fermerProjet(modal) {
+
+    modal.classList.remove("active");
+
+
+    setTimeout(function () {
+
+        modal.remove();
+
+    }, 300);
+
+}
