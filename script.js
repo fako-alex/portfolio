@@ -423,6 +423,19 @@ const ebooks = [
         file:
             "ebooks/Devenir_la_meilleure_version_de_soi_21_en_jours.pdf"
     },
+    {
+        title:
+            "Devenir la meilleure version de soi en 22 jours",
+
+        description:
+            "Un guide pratique pour améliorer ses habitudes, sa discipline, son organisation et progresser vers une meilleure version de soi-même.",
+
+        image:
+            "ebooks/Devenir_la_meilleure_version_de_soi_21_en_jours.png",
+
+        file:
+            "ebooks/Devenir_la_meilleure_version_de_soi_21_en_jours.pdf"
+    },
 
 
    
