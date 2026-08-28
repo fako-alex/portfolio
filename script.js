@@ -109,7 +109,7 @@ const certifications = [
         title: "Certification en automatisation Excel",
 
         description:
-            "Certification en automatisation et utilisation avancée d'Excel.",
+            "Maîtrise des techniques avancées d’automatisation dans Excel, incluant la création de processus intelligents, l’optimisation des tâches répétitives et l’utilisation de fonctionnalités avancées pour améliorer la productivité. Compétences mises en avant : Automatisation de tâches complexes, Utilisation avancée des formules et fonctions, Création de workflows efficaces, Optimisation du temps de traitement des données",
 
         image:
             "certifications/Certificat automatisation excel.jpg",
@@ -123,7 +123,7 @@ const certifications = [
         title: "Excel Power Query",
 
         description:
-            "Certification Excel Power Query for Beginners.",
+            "Certification confirmant la capacité à transformer, nettoyer et structurer des données grâce à Power Query, un outil essentiel pour l’analyse moderne et la gestion de données volumineuses. Compétences mises en avant : Manipulation et transformation de données, Connexion à des sources multiples, Nettoyage automatisé des datasets, Préparation de données pour l’analyse avancée",
 
         image:
             "certifications/certificat Excel Power Query in excel for beginners.jpg",
@@ -137,7 +137,7 @@ const certifications = [
         title: "Certification Microsoft Excel",
 
         description:
-            "Certification de compétences en Microsoft Excel.",
+            "Validation des compétences essentielles et avancées en Microsoft Excel, incluant l’analyse de données, la création de tableaux dynamiques et la gestion professionnelle de feuilles de calcul. Compétences mises en avant : Tableaux croisés dynamiques, Fonctions avancées (INDEX, EQUIV, SOMME.SI.ENS…), Analyse et visualisation de données, Structuration de fichiers professionnels",
 
         image:
             "certifications/Certificat ms excel.jpg",
@@ -151,7 +151,7 @@ const certifications = [
         title: "Présentations efficaces",
 
         description:
-            "Certification sur les techniques de présentation efficace.",
+            "Certification attestant la maîtrise des techniques de communication visuelle, de persuasion et de structuration de présentations professionnelles adaptées à différents publics. Compétences mises en avant : Création de présentations impactantes, Structuration de messages clairs et convaincants, Maîtrise des techniques de persuasion, Adaptation du contenu à l’audience",
 
         image:
             "certifications/Certification sur des présentations efficaces.jpg",
@@ -165,7 +165,7 @@ const certifications = [
         title: "Upgrade Windows",
 
         description:
-            "Certification relative à la mise à niveau et à l'utilisation de Windows.",
+            "Certification démontrant la capacité à effectuer des mises à niveau de systèmes Windows, à diagnostiquer des incompatibilités et à assurer une migration sécurisée vers des versions plus performantes. Compétences mises en avant : Migration de systèmes Windows, Diagnostic et résolution de problèmes, Gestion de compatibilité matérielle et logicielle, Sécurisation des environnements après mise à niveau",
 
         image:
             "certifications/Certification upgrate windows.jpg",
@@ -179,8 +179,7 @@ const certifications = [
         title: "Dahua ACSEN",
 
         description:
-            "Certification Dahua ACSEN.",
-
+            "Certification officielle Dahua confirmant la maîtrise des systèmes de contrôle d’accès, incluant leur installation, configuration, maintenance et optimisation dans des environnements professionnels. Compétences mises en avant : Installation de systèmes de contrôle d’accès, Paramétrage des terminaux et lecteurs, Gestion des accès et permissions, Maintenance et diagnostic des systèmes ACS.",
         image:
             "certifications/DHCA-ACSEN202605097987_1783353620597.jpg",
 
@@ -193,7 +192,7 @@ const certifications = [
         title: "Dahua ACSEN — Company",
 
         description:
-            "Certification Dahua ACSEN — version entreprise.",
+            "Certification entreprise attestant la capacité à déployer des solutions de contrôle d’accès Dahua dans des environnements organisationnels complexes, avec gestion multi-sites et exigences professionnelles. Compétences mises en avant : Déploiement multi-sites, Gestion avancée des utilisateurs et rôles, Intégration dans des infrastructures existantes, Conformité et sécurité opérationnelle",
 
         image:
             "certifications/DHCA-ACSEN202605097987_company__1783353621844.jpg",
@@ -207,7 +206,7 @@ const certifications = [
         title: "Dahua IPVSS",
 
         description:
-            "Certification Dahua IPVSS.",
+            "Certification Dahua confirmant la maîtrise des systèmes de vidéosurveillance IP, incluant la configuration des caméras, des NVR, des réseaux et des solutions de monitoring avancées. Compétences mises en avant : Installation et configuration de caméras IP, Paramétrage des NVR et serveurs vidéo, Optimisation des flux vidéo et du réseau, Gestion de la sécurité et du stockage",
 
         image:
             "certifications/DHCA-IPVSSEN202601312904_1783353618131.jpg",
@@ -221,7 +220,7 @@ const certifications = [
         title: "Dahua IPVSS — Company",
 
         description:
-            "Certification Dahua IPVSS — version entreprise.",
+            "Certification entreprise validant la capacité à concevoir, installer et gérer des systèmes de vidéosurveillance IP à grande échelle, adaptés aux besoins professionnels et aux environnements critiques. Compétences mises en avant : Architecture de vidéosurveillance professionnelle, Gestion de projets de sécurité, Intégration réseau avancée, Monitoring et maintenance à grande échelle",
 
         image:
             "certifications/DHCA-IPVSSEN202601312904_company__1783353619483.jpg",
@@ -235,7 +234,7 @@ const certifications = [
         title: "Gestion du temps et productivité",
 
         description:
-            "Certification sur la gestion du temps et l'amélioration de la productivité.",
+            "Certification démontrant la maîtrise des techniques modernes de gestion du temps, d’organisation personnelle et d’optimisation de la productivité au quotidien. Compétences mises en avant : Organisation efficace, Priorisation des tâches, Méthodes de productivité, Gestion du stress et des deadlines",
 
         image:
             "certifications/Gérer son temps et être plus productif_page-0001.jpg",
@@ -422,20 +421,7 @@ const ebooks = [
 
         file:
             "ebooks/Devenir_la_meilleure_version_de_soi_21_en_jours.pdf"
-    },
-    {
-        title:
-            "Devenir la meilleure version de soi en 22 jours",
-
-        description:
-            "Un guide pratique pour améliorer ses habitudes, sa discipline, son organisation et progresser vers une meilleure version de soi-même.",
-
-        image:
-            "ebooks/Devenir_la_meilleure_version_de_soi_21_en_jours.png",
-
-        file:
-            "ebooks/Devenir_la_meilleure_version_de_soi_21_en_jours.pdf"
-    },
+    }
 
 
    
@@ -597,22 +583,22 @@ afficherEbooks();
 
 const videos = [
     {
-        title: "Installation du gestionnaire de File d'attente Extratime",
+        title: "Installation du gestionnaire de File d'attente Extratime au bureau des entrées au CHUL Partie 1",
         description: "Installation et mise en service d'une solution de gestion de file d'attente Extratime pour améliorer l'expérience client et optimiser la gestion des flux dans les établissements.",
         file: "videos/video installation GFA 1.mp4"
     },
     {
-        title: "Installation du gestionnaire de File d'attente Extratime",
+        title: "Installation du gestionnaire de File d'attente Extratime au bureau des entrées au CHUL Partie 2",
         description: "Installation et mise en service d'une solution de gestion de file d'attente Extratime pour améliorer l'expérience client et optimiser la gestion des flux dans les établissements.",
         file: "videos/video installation GFA 2.mp4"
     },
     {
-        title: "Installation du gestionnaire de File d'attente Extratime",
+        title: "Installation du gestionnaire de File d'attente Extratime au bureau des entrées au CHUL Partie 3",
         description: "Installation et mise en service d'une solution de gestion de file d'attente Extratime pour améliorer l'expérience client et optimiser la gestion des flux dans les établissements.",
         file: "videos/video installation GFA 3.mp4"
     },
     {
-        title: "Installation du gestionnaire de File d'attente Extratime",
+        title: "Installation du gestionnaire de File d'attente Extratime au bureau des entrées au CHUL Partie 4",
         description: "Installation et mise en service d'une solution de gestion de file d'attente Extratime pour améliorer l'expérience client et optimiser la gestion des flux dans les établissements.",
         file: "videos/video installation GFA 4.mp4"
     }
